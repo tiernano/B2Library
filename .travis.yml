@@ -1,5 +1,5 @@
 language: csharp
-solution: B2Library\B2Library.sln
+solution: B2Library/B2Library.sln
 
 notifications:
   webhooks:
