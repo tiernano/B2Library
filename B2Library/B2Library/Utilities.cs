@@ -1,4 +1,5 @@
 ﻿using B2Library.Entities;
+using B2Library.Exceptions;
 using Newtonsoft.Json;
 using NLog;
 using System;
@@ -88,8 +89,8 @@ namespace B2Library
             }
             else
             {
-                //something went wrong!
-                return null;
+                logger.Error("The SHA of the uploaded file does not match ours... Something has gone wrong!");
+                throw new Sha1MisMatchException("Sha1Mismatch");
             }
 
         }
